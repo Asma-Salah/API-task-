@@ -14,8 +14,8 @@ datasource db {
 }
 
 model taskAPI{
-  task_id String @id @default(uuid())
-  title String
-  description String
-  isCompleted Boolean @default(false)
+  task_id String @id @default(uuid()) @map("id")
+  title String @map("title")
+  description String @map("task_description")
+  isCompleted Boolean @default(false) @map("is completed")
 }
